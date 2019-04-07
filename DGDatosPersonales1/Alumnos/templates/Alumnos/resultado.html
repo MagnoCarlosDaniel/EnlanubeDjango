@@ -1,0 +1,29 @@
+(% extends "alumnos/base.html" %)
+{% load static %}
+{%block estilos%}
+<link rel="stylesheet" type="text/css" href="{% static 'css/resultados.css' %}">
+{% endblock %}
+
+{% block titulo %}
+Resultados
+{% endblock%}
+
+{% block banner %}
+<h1>Hola estos son los resultados </h1>
+{% endblock%}
+
+{% block contenido %}
+{% for object in Alumnos%}
+<div class="info">
+    <p>Nombre:{{object.Nombre}}</p>
+    <p>Matricula:{{object.Num_count}}</p>
+     <p>Edad:{{object.Edad}}</p>
+     <p>Fecha de nacimiento:{{object.FechaNacimiento}}</p>
+     <p>Sexo:{{object.Sexo}}</p>
+     <p>Email:{{object.Email}}</p>
+     <p>Telefono:{{object.Telefono}}</p>
+     <p>Domicilio:{{object.Domicilio}}</p>
+
+</div>
+{% endfor %}
+{% endblock %}

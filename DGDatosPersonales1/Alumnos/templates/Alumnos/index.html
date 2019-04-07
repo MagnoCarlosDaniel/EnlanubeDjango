@@ -1,0 +1,18 @@
+(% extends "alumnos/base.html" %)
+{% load static %}
+{%block estilos%}
+<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+{% endblock %}
+{% load static %}
+
+{% block titulo %}
+Indice
+{% endblock%}
+
+{% block banner %}
+<h1>Hola este es el indice</h1>
+{% endblock%}
+
+{% block contenido %}
+<p>este es el contenido de la pagina indice</p>
+{% endblock %}
